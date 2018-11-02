@@ -17,13 +17,13 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/github-user/agenda/entity"
+	"github.com/Howlyao/agenda/entity"
 	"github.com/spf13/cobra"
 )
 
 // qmCmd represents the qm command
 var qmCmd = &cobra.Command{
-	Use:   "querymeeting",
+	Use:   "qm",
 	Short: "query meetings in a time interval",
 	Run: func(cmd *cobra.Command, args []string) {
 		starttime, _ := cmd.Flags().GetString("starttime")

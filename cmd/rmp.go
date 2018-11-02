@@ -17,13 +17,13 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/github-user/agenda/entity"
+	"github.com/Howlyao/agenda/entity"
 	"github.com/spf13/cobra"
 )
 
 // rmpCmd represents the rmp command
 var rmpCmd = &cobra.Command{
-	Use:   "removeparticipator",
+	Use:   "rmp",
 	Short: "remove participator(s)",
 	Run: func(cmd *cobra.Command, args []string) {
 		title, _ := cmd.Flags().GetString("title")

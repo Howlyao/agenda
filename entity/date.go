@@ -75,7 +75,7 @@ func IsValid(t_date Date) bool {
 			return false
 		}
 	} else {
-		//若年份为闰年，则2月29天
+
 		if (current_year%4 == 0 && current_year%100 != 0) ||
 			(current_year%400 == 0) {
 			if current_day > 29 {
@@ -108,7 +108,7 @@ func String2Int(s string) int {
  */
 func StringToDate(t_dateString string) (Date, error) {
 	var resultDate Date
-	//检查字符串的格式是否正确．
+
 	if len(t_dateString) != 16 {
 		return resultDate, errors.New("wrong")
 	}
@@ -142,7 +142,6 @@ func StringToDate(t_dateString string) (Date, error) {
 		}
 		count++
 	}
-	//若字符串格式没问题
 
 	resultDate.Year = String2Int(t_dateString[0:4])
 	resultDate.Month = String2Int(t_dateString[5:7])
@@ -244,12 +243,6 @@ func (m_date Date) MoreThan(t_date Date) bool {
 	}
 	return false
 }
-func (m_date Date) LessThan(t_date Date) bool {
-	if m_date.IsSameDate(t_date) == false && m_date.MoreThan(t_date) == false {
-		return true
-	}
-	return false
-}
 
 /**
 * @brief check whether the CurrentDate is  greater or equal than the
@@ -265,4 +258,11 @@ func (m_date Date) GreateOrEqual(t_date Date) bool {
  */
 func (m_date Date) LessOrEqual(t_date Date) bool {
 	return !m_date.MoreThan(t_date)
+}
+
+func (m_date Date) LessThan(t_date Date) bool {
+	if m_date.IsSameDate(t_date) == false && m_date.MoreThan(t_date) == false {
+		return true
+	}
+	return false
 }

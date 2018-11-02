@@ -17,13 +17,13 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/github-user/agenda/entity"
+	"github.com/Howlyao/agenda/entity"
 	"github.com/spf13/cobra"
 )
 
 // clearmCmd represents the clearm command
 var clearmCmd = &cobra.Command{
-	Use:   "clearmeeting",
+	Use:   "clearm",
 	Short: "Clear all meeting as a sponsor",
 	Run: func(cmd *cobra.Command, args []string) {
 

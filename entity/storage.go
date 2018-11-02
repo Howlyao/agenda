@@ -15,9 +15,9 @@ type UserFilter func(*User) bool
 // MeetingFilter : MeetingFilter types take an *User and return a bool value.
 type MeetingFilter func(*Meeting) bool
 
-var userinfoPath = "./userInfo.txt"
-var metinfoPath = "./meetingInfo.txt"
-var curUserPath = "./curUser.txt"
+var userinfoPath = "./src/github.com/Howlyao/agenda/entity/userInfo.txt"
+var metinfoPath = "./src/github.com/Howlyao/agenda/entity/meetingInfo.txt"
+var curUserPath = "./src/github.com/Howlyao/agenda/entity/curUser.txt"
 
 var dirty bool
 
@@ -236,11 +236,11 @@ func writeToFile() error {
 }
 
 func readUser() error {
-	return readJSON(userinfoPath, uData)
+	return readJSON(userinfoPath, &uData)
 }
 
 func readMet() error {
-	return readJSON(metinfoPath, mData)
+	return readJSON(metinfoPath, &mData)
 }
 
 func readJSON(fpath string, data interface{}) error {

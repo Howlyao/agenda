@@ -17,13 +17,13 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/github-user/agenda/entity"
+	"github.com/Howlyao/agenda/entity"
 	"github.com/spf13/cobra"
 )
 
 // quCmd represents the qu command
 var quCmd = &cobra.Command{
-	Use:   "queryuser",
+	Use:   "qu",
 	Short: "To query user",
 	Run: func(cmd *cobra.Command, args []string) {
 

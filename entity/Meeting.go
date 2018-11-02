@@ -58,6 +58,15 @@ func (m_meeting Meeting) IsParticipator(t_username string) bool {
 	}
 	return false
 }
+
+func (m_meeting *Meeting) AddParticipator(t_username string) bool {
+	if strings.EqualFold(m_meeting.Sponsor, t_username) || m_meeting.IsParticipator(t_username) {
+		return false
+	}
+	m_meeting.Participators = append(m_meeting.Participators, t_username)
+	return true
+}
+
 func (m_meeting *Meeting) DeleteParticipator(t_username string) {
 	var i int
 	tl := len(m_meeting.Participators)
@@ -67,11 +76,4 @@ func (m_meeting *Meeting) DeleteParticipator(t_username string) {
 			break
 		}
 	}
-}
-func (m_meeting *Meeting) AddParticipator(t_username string) bool {
-	if strings.EqualFold(m_meeting.Sponsor, t_username) || m_meeting.IsParticipator(t_username) {
-		return false
-	}
-	m_meeting.Participators = append(m_meeting.Participators, t_username)
-	return true
 }

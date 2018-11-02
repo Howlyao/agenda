@@ -17,13 +17,13 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/github-user/agenda/entity"
+	"github.com/Howlyao/agenda/entity"
 	"github.com/spf13/cobra"
 )
 
 // rmaCmd represents the rma command
 var rmaCmd = &cobra.Command{
-	Use:   "deleteaccount",
+	Use:   "rma",
 	Short: "to delete current user",
 	Run: func(cmd *cobra.Command, args []string) {
 

@@ -17,13 +17,13 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/github-user/agenda/entity"
+	"github.com/Howlyao/agenda/entity"
 	"github.com/spf13/cobra"
 )
 
 // rmmCmd represents the rmm command
 var rmmCmd = &cobra.Command{
-	Use:   "deletemeeting",
+	Use:   "rmm",
 	Short: "delete meeting",
 	Run: func(cmd *cobra.Command, args []string) {
 

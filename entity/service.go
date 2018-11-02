@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-var curuserinfoPath = "curUser.txt"
+var curuserinfoPath = "./src/github.com/Howlyao/agenda/entity/curUser.txt"
 
 func UserLogout() bool {
 	if err := Logout(); err != nil {
@@ -23,11 +23,14 @@ func GetCurUser() (User, bool) {
 func UserLogin(username string, password string) bool {
 	user := QueryUser(func(u *User) bool {
 		if u.Username == username && u.Password == password {
+
 			return true
 		}
+
 		return false
 	})
 	if len(user) == 0 {
+
 		fmt.Println("Login: User not Exist")
 		return false
 	}

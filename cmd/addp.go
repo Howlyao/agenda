@@ -17,13 +17,13 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/github-user/agenda/entity"
+	"github.com/Howlyao/agenda/entity"
 	"github.com/spf13/cobra"
 )
 
 // addpCmd represents the addp command
 var addpCmd = &cobra.Command{
-	Use:   "addparticipator",
+	Use:   "addp",
 	Short: "add participators",
 	Long:  `This is a command to add participator(s) to a a meeting specified by title`,
 	Args:  cobra.MinimumNArgs(0),
